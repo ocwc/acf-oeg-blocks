@@ -1,0 +1,108 @@
+.acf-block-preview .peoplegrid a,
+.acf-block-preview .peoplegrid .card {
+  pointer-events: none;
+}
+.editor-pic {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.peoplegrid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+.acf-block-preview .peoplegrid .card {
+  width: 30%;
+}
+
+.peoplegrid a,
+.peoplegrid a:hover {
+  border: none;
+  text-decoration: none;
+  background-image: none;
+  background-color: transparent;
+  width: auto;
+}
+.card {
+  width: 48%;
+  border-radius: 0.25rem;
+  margin: 0.5rem 0;
+}
+
+.card:active {
+  background: #1a52ba;
+  color: white;
+}
+.card .inner-card {
+  padding: 2rem 1rem;
+}
+.pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: visible;
+  margin: 0 auto 0.5rem;
+  position: relative;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNTkuMSAoODYxNDQpIC0gaHR0cHM6Ly9za2V0Y2guY29tIC0tPgogICAgPHRpdGxlPmxpbmVzLXBhdHRlcm48L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0ibGluZXMtcGF0dGVybiIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICAgICAgPGxpbmUgeDE9IjAiIHkxPSIxIiB4Mj0iOCIgeTI9IjkiIGlkPSJMaW5lIiBzdHJva2U9IiMzNjM2MzYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9saW5lPgogICAgICAgIDxsaW5lIHgxPSIxIiB5MT0iLTIiIHgyPSI5IiB5Mj0iNiIgaWQ9IkxpbmUiIHN0cm9rZT0iIzM2MzYzNiIgZmlsbC1ydWxlPSJub256ZXJvIj48L2xpbmU+CiAgICAgICAgPGxpbmUgeDE9IjAiIHkxPSI1IiB4Mj0iNCIgeTI9IjkiIGlkPSJMaW5lIiBzdHJva2U9IiMzNjM2MzYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9saW5lPgogICAgICAgIDxsaW5lIHgxPSI2IiB5MT0iLTEiIHgyPSIxMCIgeTI9IjMiIGlkPSJMaW5lIiBzdHJva2U9IiMzNjM2MzYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9saW5lPgogICAgPC9nPgo8L3N2Zz4=)
+    repeat;
+}
+
+.pic img {
+  object-fit: cover;
+  width: 100%;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: transform 500ms;
+  will-change: transform;
+}
+
+.card:hover .pic img {
+  transform: translate(-8px, -8px);
+  transition: transform 125ms;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card .line1,
+.card .line2,
+.card .line3 {
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.card .line1 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card .line2 {
+  font-size: normal;
+}
+
+.card .line3 {
+  font-size: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 240px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .card {
+    width: 290px;
+  }
+}

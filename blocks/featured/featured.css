@@ -1,0 +1,97 @@
+.featured-block-header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+a.featured-item {
+  background-color: transparent;
+  border: none !important;
+  position: relative;
+  width: 100%;
+  max-height: 520px;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: 1s all;
+}
+
+.acf-block-preview .oeg-featured-block {
+  pointer-events: none;
+}
+
+a.featured-item img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+a.featured-item .title {
+  background-color: white;
+  z-index: 1;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #1c2b5a;
+  line-height: 1.2;
+  border-top-right-radius: 0.125rem;
+  border-bottom-right-radius: 0.125rem;
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  font-weight: 700;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-color: #cfdefc;
+  max-width: 90%;
+}
+
+a.featured-item:hover .title {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  --border-opacity: 1;
+  border-color: #3b80f7;
+  border-color: rgba(59, 128, 247, var(--border-opacity));
+  -webkit-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+a.featured-item:active .title {
+  background-color: #0d59f2;
+  color: #cfdefc;
+}
+@media (min-width: 768px) {
+  .wp-admin .oeg-featured-block {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 1rem;
+    gap: 1rem;
+    grid-gap: 1rem;
+    gap: 1rem;
+  }
+  .wp-admin .oeg-featured-block.two-items {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+  .wp-admin .oeg-featured-block a {
+    grid-row: auto;
+    grid-column: auto;
+  }
+  .wp-admin .oeg-featured-block a:nth-child(1) {
+    grid-row: span 2 / span 2;
+    grid-column: span 2 / span 2;
+  }
+}
