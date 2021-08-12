@@ -35,7 +35,7 @@ background-image: url('<?php echo $hero_img; ?>');
   <div class="container">
     <div class="media-box font-sans">
       <h2 class="hero-title text-gray-100"><?php echo $hero_title; ?></h2>
-      <div class="hero-desc font-sans text-gray-100 text-sm"><?php echo $hero_desc; ?></div>
+      <div class="hero-desc font-sans text-gray-100 text-base"><?php echo $hero_desc; ?></div>
       <?php if ($hero_link) : ?>
         <?php $link_target = $hero_link['target'] ? $hero_link['target'] : '_self'; ?>
         <a href="" class="hero-link shadow-sm" title="<?php echo $hero_title; ?>" target="<?php echo $link_target; ?>"><?php echo $hero_link['title']; ?> <svg width="7" height="10" viewBox="0 0 7 10">
