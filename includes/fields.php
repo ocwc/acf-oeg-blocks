@@ -68,7 +68,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => 'Image',
             'name' => 'img',
             'type' => 'image',
-            'instructions' => 'Recommended size is 1600x1080 px. We suggest not to use images with text, as it might be cropped or blocked.',
+            'instructions' => 'Recommended size is 1600x1080 px. Images that include text are not recommended, as it might be cropped or blocked.',
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -92,7 +92,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => 'Link',
             'name' => 'link',
             'type' => 'link',
-            'instructions' => 'The link can be an internal page or external url',
+            'instructions' => 'The link can be an internal page or external url (a link is optional)',
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
