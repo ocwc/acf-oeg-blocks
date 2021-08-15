@@ -56,8 +56,6 @@ function oeg_register_acf_block_types()
   ]);
 }
 
-if (function_exists('acf_register_block_type')) {
-  add_action('acf/init', 'oeg_register_acf_block_types');
-}
+add_action('acf/init', 'oeg_register_acf_block_types');
 
 include 'includes/fields.php';
