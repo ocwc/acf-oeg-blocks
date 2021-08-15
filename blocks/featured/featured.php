@@ -40,7 +40,7 @@ $header = get_field('block_header');
         while (have_rows('featured_item')) : the_row();
 
             // Load sub field value.
-            $img = get_sub_field('img') ?: 'Add an image';
+            $img = get_sub_field('img');
             $size = 'large';
             $title = get_sub_field('title') ?: 'Add a title';
             $link = get_sub_field('link') ?: 'Add an external or internal link';
@@ -61,6 +61,8 @@ $header = get_field('block_header');
                 <?php
                 if ($img) :
                     echo wp_get_attachment_image($img, $size);
+                else :
+                    echo '<img src="' . plugin_dir_url(__FILE__) . 'placeholder-image-768x576.png">';
                 endif;
                 ?>
                 <p class="title m-0 font-sans

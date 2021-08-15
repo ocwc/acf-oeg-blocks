@@ -70,9 +70,10 @@ $peopleGrid = get_field('personas');
 
           <?php
           $lines = get_sub_field('lines');
+          $name = $lines['line1'] ?: 'Ale José Yunuen';
 
           if ($lines['line1']) :
-            echo '<p class="line1 text-base">' . $lines['line1'] . '</p>';
+            echo '<p class="line1 text-base">' . $name . '</p>';
           else :
             echo '<p class="line1 text-base">Ale José Yunuen</p>';
           endif;
