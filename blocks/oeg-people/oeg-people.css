@@ -31,9 +31,9 @@
   width: auto;
 }
 .card {
-  width: 48%;
+  width: 100%;
   border-radius: 0.25rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem auto;
 }
 
 .card:hover {
@@ -97,6 +97,14 @@
 
 .card .line3 {
   font-size: normal;
+}
+
+/* Mobile first styles */
+@media screen and (min-width: 440px) {
+  .card {
+    width: 48%;
+    margin: 0.5rem 0;
+  }
 }
 
 @media screen and (min-width: 768px) {

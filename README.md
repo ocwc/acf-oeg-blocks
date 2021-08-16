@@ -1,8 +1,13 @@
-# acf-oeg-blocks
+# OEG Blocks with ACF
 
-Blocks:
+This is a plugin that adds custom gutenberg blocks, using custom fields from the plugin ACF.
+
+**Needs ACF Pro installed.**
+
+Available blocks:
+
 - Featured items
 - Hero
 - Grid of People
 
-Needs ACF Pro installed.
+Works with the OEGlobal theme.
