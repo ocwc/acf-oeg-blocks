@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: OEGlobal Custom Blocks
+Plugin Name: OEGlobal Custom Blocks with ACF PRO
 Description: Customize content with this block for featured content.
 Version: 1.0.1
 Author: Mario Badilla
@@ -18,6 +18,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with OEGlobal Custom Blocks. If not, see <https://www.gnu.org/licenses/>.
 */
+
+if (!defined('ABSPATH')) exit;
 
 function oeg_register_acf_block_types()
 {
@@ -56,6 +58,9 @@ function oeg_register_acf_block_types()
   ]);
 }
 
-add_action('acf/init', 'oeg_register_acf_block_types');
+// Check function exists.
+if (function_exists('acf_register_block_type')) {
+  add_action('acf/init', 'oeg_register_acf_block_types');
+}
 
-include 'includes/fields.php';
+include_once(plugin_dir_path(__FILE__) . 'includes/fields.php');
