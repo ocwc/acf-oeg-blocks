@@ -101,9 +101,13 @@
 
 /* Mobile first styles */
 @media screen and (min-width: 440px) {
+  .peoplegrid {
+    justify-content: flex-start;
+  }
+
   .card {
     width: 48%;
-    margin: 0.5rem 0;
+    margin: 0.5rem 1%;
   }
 }
 
