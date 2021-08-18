@@ -1,5 +1,7 @@
 <?php
-if (!defined('ABSPATH')) exit;
+if (!defined('ABSPATH')) {
+  exit; // Prevent access directly
+}
 
 if (function_exists('acf_add_local_field_group')) {
 

@@ -1,4 +1,7 @@
 <?php
+if (!defined('ABSPATH')) {
+  exit; // Prevent access directly
+}
 
 // Create id attribute allowing for custom "anchor" value.
 $id = 'oeg_hero-' . $block['id'];
