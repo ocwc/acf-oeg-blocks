@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: OEGlobal Custom Blocks with ACF PRO
-Description: Adds custom gutenberg blocks.
+Plugin Name: OEGlobal Custom Blocks
+Description: Adds custom gutenberg blocks with the help of ACF PRO.
 Version: 1.0.1
 Author: Mario Badilla
 
@@ -19,7 +19,9 @@ You should have received a copy of the GNU General Public License
 along with OEGlobal Custom Blocks. If not, see <https://www.gnu.org/licenses/>.
 */
 
-if (!defined('ABSPATH')) exit;
+if (!defined('ABSPATH')) {
+  exit; // Prevent access directly
+}
 
 function oeg_register_acf_block_types()
 {
