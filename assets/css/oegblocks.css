@@ -1,0 +1,243 @@
+/* 
+**  Featured items 
+*/
+.oeg-featured-block .featured-block-header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+.oeg-featured-block a.featured-item {
+  background-color: transparent;
+  border: none !important;
+  background-image: none;
+  position: relative;
+  width: 100%;
+  max-height: 520px;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: 1s all;
+}
+.oeg-featured-block a.featured-item img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+.oeg-featured-block a.featured-item .title {
+  background-color: white;
+  z-index: 1;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #1c2b5a;
+  line-height: 1.2;
+  border-top-right-radius: 0.125rem;
+  border-bottom-right-radius: 0.125rem;
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  font-weight: 700;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-color: #cfdefc;
+  max-width: 90%;
+}
+.oeg-featured-block a.featured-item:hover .title {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  --border-opacity: 1;
+  border-color: #3b80f7;
+  border-color: rgba(59, 128, 247, var(--border-opacity));
+  -webkit-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.oeg-featured-block a.featured-item:hover .title, .oeg-featured-block a.featured-item:active .title {
+  background-color: #0d59f2;
+  color: #cfdefc;
+}
+
+/* -----------------------------
+**
+**  Hero 
+**
+--------------------------------*/
+.oeg_hero {
+  height: auto;
+  overflow-y: auto;
+  margin-bottom: 4rem;
+  background-size: cover;
+  background-position: top center;
+  min-height: 8em;
+  font-family: Montserrat, sans-serif;
+}
+.oeg_hero.oeg_full {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+@media screen and (min-width: 640px) {
+  .oeg_hero.oeg_full {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
+.oeg_hero .media-box {
+  margin: 3em 0;
+  background: rgba(28, 43, 90, 0.8);
+  padding: 1em;
+  width: 100%;
+}
+.oeg_hero .media-box h2.hero-title {
+  color: #e6e6e6;
+  margin-top: 0;
+}
+.oeg_hero .media-box .hero-desc p {
+  color: #e6e6e6;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+}
+.oeg_hero .media-box a.hero-link {
+  /* Auto Layout */
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  background: #ffffff;
+  color: #333333;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 0.5em;
+}
+.oeg_hero .media-box a.hero-link:hover {
+  opacity: 0.8;
+}
+.oeg_hero .media-box a.hero-link svg {
+  margin-left: 0.5rem;
+}
+@media screen and (min-width: 640px) {
+  .oeg_hero .media-box {
+    padding: 2em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .oeg_hero .media-box {
+    margin: 3em 0;
+    max-width: 720px;
+    margin-left: 10%;
+  }
+}
+
+/* ------------------------------------------------------/
+**  People grid
+**
+**  Transitions based on @JoshWComeau 
+**  https://www.joshwcomeau.com/animation/css-transitions/
+**
+/-------------------------------------------------------*/
+.peoplegrid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 100%;
+  margin: 1rem 0;
+}
+.peoplegrid a:hover {
+  border: none;
+  text-decoration: none;
+  background-image: none;
+  background-color: transparent;
+  width: auto;
+}
+.peoplegrid .card {
+  width: 100%;
+  border-radius: 0.25rem;
+  margin: 0.5rem auto;
+}
+.peoplegrid .card p {
+  margin: 0;
+}
+.peoplegrid .card .line1,
+.peoplegrid .card .line2,
+.peoplegrid .card .line3 {
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+.peoplegrid .card .line1 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.peoplegrid .card .line2 {
+  font-size: normal;
+}
+.peoplegrid .card .line3 {
+  font-size: normal;
+}
+.peoplegrid .card:hover .pic img {
+  transform: translate(-8px, -8px);
+  transition: transform 125ms;
+}
+.peoplegrid .card:hover {
+  background: #f5f5f5;
+}
+.peoplegrid .card:active {
+  background: #1a52ba;
+  color: white;
+}
+@media screen and (min-width: 440px) {
+  .peoplegrid .card {
+    width: 48%;
+    margin: 0.5rem 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .peoplegrid .card {
+    width: 240px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .peoplegrid .card {
+    width: 290px;
+  }
+}
+.peoplegrid .inner-card {
+  padding: 2rem 1rem;
+}
+.peoplegrid .pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: visible;
+  margin: 0 auto 0.5rem;
+  position: relative;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNTkuMSAoODYxNDQpIC0gaHR0cHM6Ly9za2V0Y2guY29tIC0tPgogICAgPHRpdGxlPmxpbmVzLXBhdHRlcm48L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0ibGluZXMtcGF0dGVybiIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICAgICAgPGxpbmUgeDE9IjAiIHkxPSIxIiB4Mj0iOCIgeTI9IjkiIGlkPSJMaW5lIiBzdHJva2U9IiMzNjM2MzYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9saW5lPgogICAgICAgIDxsaW5lIHgxPSIxIiB5MT0iLTIiIHgyPSI5IiB5Mj0iNiIgaWQ9IkxpbmUiIHN0cm9rZT0iIzM2MzYzNiIgZmlsbC1ydWxlPSJub256ZXJvIj48L2xpbmU+CiAgICAgICAgPGxpbmUgeDE9IjAiIHkxPSI1IiB4Mj0iNCIgeTI9IjkiIGlkPSJMaW5lIiBzdHJva2U9IiMzNjM2MzYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9saW5lPgogICAgICAgIDxsaW5lIHgxPSI2IiB5MT0iLTEiIHgyPSIxMCIgeTI9IjMiIGlkPSJMaW5lIiBzdHJva2U9IiMzNjM2MzYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9saW5lPgogICAgPC9nPgo8L3N2Zz4=) repeat;
+}
+.peoplegrid .pic img {
+  object-fit: cover;
+  width: 100%;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: transform 500ms;
+  will-change: transform;
+}
+@media screen and (min-width: 440px) {
+  .peoplegrid {
+    justify-content: flex-start;
+  }
+}
+
+/*# sourceMappingURL=oegblocks.css.map */

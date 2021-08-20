@@ -1,0 +1,57 @@
+/* Featured content */
+
+.acf-block-preview .oeg-featured-block {
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .wp-admin .oeg-featured-block {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 1rem;
+    gap: 1rem;
+    grid-gap: 1rem;
+    gap: 1rem;
+  }
+  .wp-admin .oeg-featured-block.two-items {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+  .wp-admin .oeg-featured-block a {
+    grid-row: auto;
+    grid-column: auto;
+  }
+  .wp-admin .oeg-featured-block a:nth-child(1) {
+    grid-row: span 2 / span 2;
+    grid-column: span 2 / span 2;
+  }
+}
+
+/* People */
+
+.acf-block-preview .peoplegrid a,
+.acf-block-preview .peoplegrid .card {
+  pointer-events: none;
+}
+
+.peoplegrid .card {
+  margin-right: 1rem;
+}
+
+/* Hero */
+
+.wp-admin .oeg_hero.oeg_full .container {
+  margin: 0 auto;
+  max-width: 840px;
+}
+
+.editor-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.acf-block-preview .peoplegrid .card {
+  width: 30%;
+}

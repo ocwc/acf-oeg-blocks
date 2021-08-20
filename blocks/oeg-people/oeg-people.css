@@ -58,6 +58,10 @@
     repeat;
 }
 
+/* 
+*   Transitions based on @JoshWComeau 
+*   https://www.joshwcomeau.com/animation/css-transitions/
+*/
 .pic img {
   object-fit: cover;
   width: 100%;
