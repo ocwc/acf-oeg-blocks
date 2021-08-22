@@ -56,7 +56,7 @@ $peopleGrid = get_field('personas');
             if ($photo) :
               echo wp_get_attachment_image($photo, $size);
             else :
-              echo '<img src="' . plugin_dir_url(__FILE__) . 'user-avatar.png">';
+              echo '<img src="' . OEGBLOCKS__PLUGIN_URL . 'assets/img/user-avatar.png">';
             endif;
             ?>
             <div class="pic-shdw"></div>

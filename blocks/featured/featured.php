@@ -65,7 +65,7 @@ $header = get_field('block_header');
                 if ($img) :
                     echo wp_get_attachment_image($img, $size);
                 else :
-                    echo '<img src="' . plugin_dir_url(__FILE__) . 'placeholder-image-768x576.png">';
+                    echo '<img src="' . OEGBLOCKS__PLUGIN_URL . 'assets/img/placeholder-image-768x576.png">';
                 endif;
                 ?>
                 <p class="title m-0 font-sans
