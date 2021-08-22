@@ -184,7 +184,6 @@
 
   .card {
     width: 100%;
-    border-radius: 0.25rem;
     margin: 0.5rem auto;
 
     p {
@@ -219,17 +218,6 @@
       }
     }
 
-    &:hover {
-      // .card
-      background: #f5f5f5;
-    }
-
-    &:active {
-      // .card
-      background: #1a52ba;
-      color: white;
-    }
-
     @media screen and (min-width: 440px) {
       // .card
       width: 48%;
@@ -245,10 +233,6 @@
       // .card
       width: 290px;
     }
-  }
-
-  .inner-card {
-    padding: 2rem 1rem;
   }
 
   .pic {
@@ -275,5 +259,146 @@
 
   @media screen and (min-width: 440px) {
     justify-content: flex-start;
+  }
+}
+
+/*----------------------
+**
+**  Post LIst
+**
+/------------------------*/
+
+.postlist {
+  margin: 1em 0;
+
+  // Grid view
+  .grid {
+    display: grid;
+    -ms-grid-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+
+    @media screen and (min-width: 768px) {
+      -ms-grid-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media screen and (min-width: 1024px) {
+      -ms-grid-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media screen and (min-width: 1280px) {
+      -ms-grid-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card {
+      padding: 0;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: 188px;
+      }
+    }
+  }
+
+  // List vew
+  .list {
+    .card {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    a.post-item-block {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: stretch;
+      border: 0;
+      background-image: none;
+
+      .post-pic {
+        flex: 0 1 25%;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .inner-card {
+        flex: 0 1 75%;
+
+        .title {
+          font-size: 1.125rem;
+          line-height: 1.5rem;
+
+          @media screen and (min-width: 768px) {
+            font-size: 1.5rem;
+            line-height: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .card {
+    .post-pic {
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+/*-------------------------
+**
+**  Global styles
+**
+/----------------------------*/
+
+.card {
+  border-radius: 0.25rem;
+  overflow: hidden;
+  background: #ffffff;
+
+  .inner-card {
+    padding: 2rem 1rem;
+  }
+
+  &:hover {
+    background: #f5f5f5;
+
+    .title {
+      color: #3b80f7; //blue-400
+    }
+  }
+
+  &:active {
+    background: #3b80f7;
+    color: white;
+    .title,
+    .cats span {
+      color: white;
+    }
+  }
+}
+
+.cats {
+  font-weight: bold;
+  font-size: 0.8rem;
+  line-height: 1;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  /* gray/gray-800 */
+  color: #333333;
+  display: flex;
+
+  span {
+    display: inline-flex;
+    margin-right: 0.5rem;
+    color: #333333;
+    text-decoration: none;
+    background-image: none;
   }
 }

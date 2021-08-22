@@ -55,3 +55,76 @@
 .acf-block-preview .peoplegrid .card {
   width: 30%;
 }
+
+/* Post list */
+
+.postlist .card a,
+.postlist .card {
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.postlist .grid {
+  display: grid;
+  -ms-grid-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .postlist .grid {
+    -ms-grid-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .postlist .grid {
+    -ms-grid-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.postlist .grid .card {
+  padding: 0;
+  width: 100%;
+}
+.postlist .card .post-pic img {
+  width: 100%;
+  height: 188px;
+}
+.postlist .grid .card p {
+  margin: 0.25em 0;
+}
+.postlist .grid .card p.title {
+  font-weight: bold;
+}
+
+/* List view */
+.postlist .list .card {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0;
+  max-width: none;
+}
+.postlist .list .card a {
+  color: #333333;
+}
+.postlist .list a.post-item-block {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  border: 0;
+  background-image: none;
+}
+.postlist .list a.post-item-block .post-pic {
+  flex: 0 1 25%;
+  background: yellowgreen;
+}
+.postlist .list a.post-item-block .post-pic img {
+  width: 100%;
+  height: 100%;
+}
+.postlist .list a.post-item-block .inner-card {
+  flex: 0 1 75%;
+}
+.postlist .card .post-pic img {
+  object-fit: cover;
+}
