@@ -2,7 +2,7 @@
 /*
 Plugin Name: OEGlobal Custom Blocks
 Description: Adds custom gutenberg blocks with the help of ACF PRO.
-Version: 1.0.3
+Version: 1.0
 Author: Mario Badilla - OEGlobal
 Github Plugin URI: https://github.com/ocwc/oeg-blocks-acf
 Primary Branch: main
@@ -27,7 +27,7 @@ if (!defined('ABSPATH')) {
 
 // Constants
 
-define('OEGBLOCKS__PLUGIN_VERSION', '1.0.3');
+define('OEGBLOCKS__PLUGIN_VERSION', '1.0');
 define('OEGBLOCKS__PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('OEGBLOCKS__PLUGIN_URL', plugin_dir_url(__FILE__));
 define('OEGBLOCKS__BASENAME', plugin_basename(__FILE__));
@@ -117,3 +117,13 @@ function oegblocks_admin_css()
   );
 }
 add_action('enqueue_block_editor_assets', 'oegblocks_admin_css');
+
+
+// Auto Update
+
+require 'assets/plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+  'https://github.com/ocwc/oeg-blocks-acf',
+  __FILE__, //Full path to the main plugin file or functions.php.
+  'oeg-blocks-acf'
+);
