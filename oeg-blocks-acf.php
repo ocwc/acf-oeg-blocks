@@ -123,7 +123,7 @@ add_action('enqueue_block_editor_assets', 'oegblocks_admin_css');
 
 require 'assets/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-  'https://gist.githubusercontent.com/marbaque/90006c961060ea1073acfdbfecba9151/raw/79dfb463ce9ec1943e8a4627dea4843f6ddde5ae/plugin.json',
+  'https://github.com/ocwc/oeg-blocks-acf',
   __FILE__, //Full path to the main plugin file or functions.php.
   'oeg-blocks-acf'
 );
