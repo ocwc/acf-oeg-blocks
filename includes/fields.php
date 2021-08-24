@@ -95,7 +95,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => 'Link',
             'name' => 'link',
             'type' => 'link',
-            'instructions' => 'The link can be an internal page or external url (a link is optional)',
+            'instructions' => 'The link can be an internal page or external url (a link is required)',
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
