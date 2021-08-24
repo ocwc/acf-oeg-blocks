@@ -1,31 +1,60 @@
-# OEG Blocks with ACF
+
+=== OEG Blocks with ACF ===
+Contributors: marbaque
+Tags: blocks, acf
+Requires at least: 5.0
+Tested up to: 5.7.2
+Stable tag: 3.1
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Add some custom blocks for the new WordPress Editor.
 
-## Description
 
-OEGlobal Custom Blocks is a set of custom blocks for the new editor. They're all made with ACF.
+== Description ==
 
-## How-to
+OEG Blocks with ACF is a boilerplate of custom blocks for the new editor. They're all made with ACF.
 
-### Installation
 
-* Download the zip archive and upload it to your WordPress site. 
-* Activate the plugin, ACF must be activated. 
-* The theme oeglobal should be activated. Other themes have not being tested.
-* Customize and start using the blocks in any post or page!
+= How-To =
 
-## To-Do
+== CSS Customisation ==
+
+These blocks use css tags from Tailwind. Make sure the theme includes it. 
+
+Here are some useful classes to define:
+
+* `[class*=".acf-block--"]`: general rules for all blocks.
+* `.acf-block-container.center-max`: **center-max** is used to define a max-width in order to keep the block's content centered on screen.
+
+
+== To-Do ==
 
 Create more blocks, and look for a way to override some block templates
 
-## Changelog
 
-### 1.1 - 2019-12-10
+== Installation ==
+
+* Download the zip archive and upload it to your WordPress site. 
+* Activate the plugin, ACF Pro (at least version 5.8) must be activated as well.
+* Theme oeglobal should be isntalled. It hasn't being tested with other themes.
+* Start using the blocks in any post or page!
+
+
+== Screenshots ==
+
+1. Block List
+2. Admin View
+3. Front-End View
+
+
+== Changelog ==
+
+== 1.1 - 2021-12-10 ==
 * Global block CSS
 * New post list block
 * New block icons
 * Auto update checker added.
 
-### 1.0 - 2019-12-09
+=== 1.0 - 2021-8-10 ===
 * Initial Commit

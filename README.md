@@ -21,13 +21,13 @@ Create more blocks, and look for a way to override some block templates
 
 ## Changelog
 
-### 1.1 - 2019-12-10
+### 1.1 - 2021-12-10
 
 - Global block CSS
 - New post list block
 - New block icons
 - Auto update checker added.
 
-### 1.0 - 2019-12-09
+### 1.0 - 2021-8-10
 
 - Initial Commit
