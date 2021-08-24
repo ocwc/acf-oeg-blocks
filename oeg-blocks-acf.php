@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: OEGlobal Custom Blocks
+Plugin Name: OEGlobal Blocks with ACF
 Description: Adds custom gutenberg blocks with the help of ACF PRO.
 Version: 1.1
 Author: Mario Badilla - OEGlobal
