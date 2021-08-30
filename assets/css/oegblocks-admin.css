@@ -128,3 +128,8 @@
 .postlist .card .post-pic img {
   object-fit: cover;
 }
+
+/* Playlist */
+.acf-block-preview .oegplaylist {
+  pointer-events: none;
+}

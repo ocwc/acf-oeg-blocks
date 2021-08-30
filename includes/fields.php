@@ -582,4 +582,84 @@ if (function_exists('acf_add_local_field_group')) {
     'active' => true,
     'description' => '',
   ));
+  // Playlist fields
+  acf_add_local_field_group(array(
+    'key' => 'group_612be4ca61ac9',
+    'title' => 'Playlist',
+    'fields' => array(
+      array(
+        'key' => 'field_612be87f97861',
+        'label' => 'Playlist',
+        'name' => 'playlist',
+        'type' => 'repeater',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'collapsed' => 'field_612be5e147139',
+        'min' => 1,
+        'max' => 0,
+        'layout' => 'table',
+        'button_label' => '',
+        'sub_fields' => array(
+          array(
+            'key' => 'field_612c06d6d9b2c',
+            'label' => 'Audio Title',
+            'name' => 'audio_title',
+            'type' => 'text',
+            'instructions' => 'Please add the audio title here.',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => '',
+          ),
+          array(
+            'key' => 'field_612be5e147139',
+            'label' => 'Audio URL',
+            'name' => 'audio_url',
+            'type' => 'url',
+            'instructions' => 'Please add the audio URL here.',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+          ),
+        ),
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'block',
+          'operator' => '==',
+          'value' => 'acf/oeg-playlist',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
 }

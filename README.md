@@ -21,6 +21,10 @@ Create more blocks, and look for a way to override some block templates
 
 ## Changelog
 
+### 1.2 - 2021-8-29
+
+- NEW Audio playlist block
+
 ### 1.1 - 2021-12-10
 
 - Global block CSS
