@@ -47,12 +47,18 @@ $header = get_field('block_header');
             $size = 'large';
             $title = get_sub_field('title') ?: 'Add a title';
             $link = get_sub_field('link');
-            $linkUrl = $link['url'];
-            $linkTitle = $link['title'];
+
             $index = get_row_index();
             // Do something...
     ?>
-            <a href="<?php echo esc_url($linkUrl); ?>" title="<?php echo esc_attr($linkTitle); ?>" class="featured-item h-400px
+            <a href="
+            <?php
+            if ($link) :
+                $linkUrl = $link['url'];
+                $linkTitle = $link['title'];
+                echo esc_url($linkUrl);
+            ?>" title="<?php echo esc_attr($linkTitle);
+                        endif; ?>" class="featured-item h-400px
             <?php if ($count >= 3) : ?>
                 <?php if ($index == 1) : ?>
                 md:row-span-2 md:col-span-2
