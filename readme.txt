@@ -50,9 +50,13 @@ Create more blocks, and look for a way to override some block templates
 
 == Changelog ==
 
+= 1.2.2 - 2021-9-16
+* fix button in hero image that was missing the link and title
+
 = 1.2.1 - 2021-9-7
 * fix width of posts when default template is used
 * fix when missing link on featured content
+* fix button in hero image 
 
 = 1.2 - 2021-8-29 =
 * NEW Audio playlist block

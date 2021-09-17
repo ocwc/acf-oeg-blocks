@@ -31,7 +31,7 @@ $toggle_w = get_field('full_toggle');
 <?php if ($toggle_w) : echo 'oeg_full';
 endif; ?>" style="background-color: <?php echo $hero_color; ?>; 
 <?php if ($hero_img) : ?>
-background-image: url('<?php echo $hero_img; ?>');
+background-image: url('<?= $hero_img; ?>');
 <?php endif; ?>
 ">
 
@@ -41,7 +41,7 @@ background-image: url('<?php echo $hero_img; ?>');
       <div class="hero-desc font-sans text-gray-100 text-base"><?php echo $hero_desc; ?></div>
       <?php if ($hero_link) : ?>
         <?php $link_target = $hero_link['target'] ? $hero_link['target'] : '_self'; ?>
-        <a href="" class="hero-link shadow-sm" title="<?php echo $hero_title; ?>" target="<?php echo $link_target; ?>"><?php echo $hero_link['title']; ?> <svg width="7" height="10" viewBox="0 0 7 10">
+        <a href="<?= $hero_link['url']; ?>" class="hero-link shadow-sm" title="<?= $hero_link['title']; ?>" target="<?= $link_target; ?>"><?= $hero_link['title']; ?> <svg width="7" height="10" viewBox="0 0 7 10">
             <path fill="currentColor" d="M1.83832 0L6.69269 5L1.83832 10L0.692688 8.82L4.42084 5L0.692688 1.18L1.83832 0Z" fill="#333333" />
           </svg>
         </a>
