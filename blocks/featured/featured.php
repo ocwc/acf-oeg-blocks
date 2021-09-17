@@ -58,7 +58,7 @@ $header = get_field('block_header');
                 $linkTitle = $link['title'];
                 echo esc_url($linkUrl);
             ?>" title="<?php echo esc_attr($linkTitle);
-                        endif; ?>" class="featured-item h-400px
+                    endif; ?>" class="featured-item h-400px
             <?php if ($count >= 3) : ?>
                 <?php if ($index == 1) : ?>
                 md:row-span-2 md:col-span-2
