@@ -75,11 +75,11 @@ if (!empty($block['align'])) {
               <?php endif; ?>
 
               <?php if ($date) : ?>
-                <p class="date font-sans text-xs"><?php echo get_the_date('F j, Y', $feat_post->ID); ?></p>
+                <p class="date font-sans text-sm text-gray-600"><?php echo get_the_date('F j, Y', $feat_post->ID); ?></p>
               <?php endif; ?>
 
               <?php if ($country) : ?>
-                <p class="meta country font-sans text-xs"><?php echo $country; ?></p>
+                <p class="meta country font-sans text-sm text-gray-600"><?php echo $country; ?></p>
               <?php endif; ?>
 
             </div>
