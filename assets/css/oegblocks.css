@@ -1,3 +1,4 @@
+@import url(colors.css);
 /* 
 **  Featured items 
 */
@@ -376,6 +377,120 @@
   list-style: none;
   padding: 0.25rem 0.5rem;
   margin: 0;
+}
+
+/* Testimonials */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.testimonial-slider {
+  position: relative;
+  width: 100%;
+  padding: 1em 0 1.5em;
+  /* Slides */
+  /* next & previous buttons */
+  /* position the "next button" to the right */
+  /* on hover, add a black bg color with a little bit see-through */
+  /* the dots/bullets/indicators */
+  /* add bg color to the active dot/circle */
+}
+.testimonial-slider .ts-wrapper {
+  max-width: 64rem;
+  margin: 0 auto;
+  position: relative;
+}
+.testimonial-slider .mySlides {
+  display: none;
+  padding: 2rem 2rem 0 2rem;
+  text-align: center;
+}
+.testimonial-slider .mySlides.active_slide {
+  display: block;
+  animation-name: fadein;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+.testimonial-slider .mySlidesContainer {
+  min-height: 5rem;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  background: var(--color-secondary-turq-100);
+}
+.testimonial-slider .prev,
+.testimonial-slider .next {
+  cursor: pointer;
+  position: absolute;
+  top: 55%;
+  margin-left: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  margin-top: -1.875rem;
+  line-height: 0.5;
+  padding: 1rem;
+  color: var(--color-gray-800);
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 50%;
+  user-select: none;
+  transition: 0.4s;
+  background-image: none;
+  background: rgba(244, 244, 244, 0.5);
+}
+.testimonial-slider .next {
+  position: absolute;
+  right: 0;
+  margin-right: 0.5rem;
+}
+.testimonial-slider .prev:hover,
+.testimonial-slider .next:hover {
+  background-color: rgba(244, 244, 244, 0.8);
+  background-image: none;
+}
+.testimonial-slider .dot-container {
+  margin: 0 auto;
+  text-align: center;
+}
+.testimonial-slider .dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0 2px;
+  background-color: var(--color-gray-300);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.4s ease;
+}
+.testimonial-slider .active {
+  background-color: var(--color-gray-800);
+}
+.testimonial-slider blockquote {
+  margin-top: 0;
+}
+.testimonial-slider blockquote p {
+  font-size: 1.35rem;
+  padding: 0;
+  margin-bottom: 0;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  color: var(--color-gray-700);
+}
+.testimonial-slider blockquote p::after {
+  content: "";
+  display: none;
+}
+.testimonial-slider p.info,
+.testimonial-slider p.author {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.testimonial-slider img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 1em;
 }
 
 /*# sourceMappingURL=oegblocks.css.map */
