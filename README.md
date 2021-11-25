@@ -21,6 +21,10 @@ Create more blocks, and look for a way to override some block templates
 
 ## Changelog
 
+### 1.2.4 - 2021-11-25
+
+- Added a testimonial block
+
 ### 1.2.3 - 2021-10-21
 
 - changed country size and color
