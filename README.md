@@ -21,6 +21,11 @@ Create more blocks, and look for a way to override some block templates
 
 ## Changelog
 
+### 1.2.5 - 2021-11-26
+
+- Added a border to posts list items
+- Added a hover scale effect to images in featured and post list blocks
+
 ### 1.2.4 - 2021-11-25
 
 - Added a testimonial block

@@ -47,7 +47,7 @@ if (!empty($block['align'])) {
         $cats = get_the_category($feat_post->ID);
         $country = get_field('country', $feat_post->ID);
       ?>
-        <div class="card p-0 font-sans shadow-md">
+        <div class="card p-0 font-sans shadow border-2 border-gray-200 hover:border-blue-700 hover:shadow-lg">
           <a href="<?php echo esc_url($permalink); ?>" class="post-item-block">
             <?php
             if ($image) :
