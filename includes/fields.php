@@ -662,7 +662,7 @@ if (function_exists('acf_add_local_field_group')) {
 		'active' => true,
 		'description' => '',
 	));
-
+	// Testimonials
 	acf_add_local_field_group(array(
 		'key' => 'group_619fbba12e6c1',
 		'title' => 'Testimonial Slider',
@@ -682,7 +682,7 @@ if (function_exists('acf_add_local_field_group')) {
 				),
 				'collapsed' => '',
 				'min' => 1,
-				'max' => 6,
+				'max' => 10,
 				'layout' => 'row',
 				'button_label' => 'Add testimonial',
 				'sub_fields' => array(
@@ -799,6 +799,21 @@ if (function_exists('acf_add_local_field_group')) {
 					'id' => '',
 				),
 				'default_value' => '',
+			),
+			array(
+				'key' => 'field_61a65b4874600',
+				'label' => 'Text color',
+				'name' => 'text_color',
+				'type' => 'color_picker',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '#333333',
 			),
 		),
 		'location' => array(

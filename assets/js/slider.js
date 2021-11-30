@@ -1,18 +1,20 @@
-let slides = document.getElementsByClassName("mySlides");
-let dots = document.getElementsByClassName("dot");
-let dot = document.querySelector(".dot");
-let prev = document.querySelector(".prev");
-let next = document.querySelector(".next");
+// By Marty at https://codepen.io/Marty-Development/pen/vYLLoaQ
+
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+var dot = document.querySelector(".dot");
+var prev = document.querySelector(".prev");
+var next = document.querySelector(".next");
 
 if (!slides.length == 0) {
-  let slideIndex = 1;
+  var slideIndex = 1;
   showSlides(slideIndex);
 
   function plusSlides(n) {
     showSlides((slideIndex += n));
   }
 
-  let currentSlide = function (n) {
+  var currentSlide = function (n) {
     showSlides((slideIndex = n));
   };
 
@@ -45,11 +47,14 @@ if (!slides.length == 0) {
     dots[slideIndex - 1].className += " active";
   }
 }
+if (prev !== undefined) {
+  prev.addEventListener("click", () => {
+    plusSlides(-1);
+  });
+}
 
-prev.addEventListener("click", () => {
-  plusSlides(-1);
-});
-
-next.addEventListener("click", () => {
-  plusSlides(1);
-});
+if (next !== undefined) {
+  next.addEventListener("click", () => {
+    plusSlides(1);
+  });
+}

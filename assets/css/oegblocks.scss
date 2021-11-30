@@ -493,8 +493,12 @@
   /* Slides */
   .mySlides {
     display: none;
-    padding: 2rem 2rem 0 2rem;
+    padding: 1rem 1.25rem 0 1.25rem;
     text-align: center;
+
+    @media screen and(min-width: 640px) {
+      padding: 2rem 2rem 0 2rem;
+    }
 
     &.active_slide {
       display: block;
@@ -506,8 +510,7 @@
 
   .mySlidesContainer {
     min-height: 5rem;
-    padding: 2.5rem 2.5rem 2rem 2.5rem;
-    background: var(--color-secondary-turq-100);
+    padding: 0 0 2rem;
   }
 
   /* next & previous buttons */
@@ -517,19 +520,26 @@
     position: absolute;
     top: 55%;
     margin-left: 0.5rem;
-    width: 3rem;
-    height: 3rem;
+    width: 1.5rem;
+    height: 1.5rem;
     margin-top: -1.875rem;
-    line-height: 0.5;
-    padding: 1rem;
-    color: var(--color-gray-800);
+    line-height: 1rem;
+    padding: 0.25rem;
+    color: var(--color-blue-700);
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1rem;
     border-radius: 50%;
     user-select: none;
     transition: 0.4s;
     background-image: none;
-    background: rgba($color: #f4f4f4, $alpha: 0.5);
+    background: rgba($color: #ffffff, $alpha: 0.3);
+
+    @media screen and(min-width: 640px) {
+      width: 3rem;
+      height: 3rem;
+      font-size: 2rem;
+      padding: 1rem;
+    }
   }
 
   /* position the "next button" to the right */
@@ -555,25 +565,24 @@
     height: 0.5rem;
     width: 0.5rem;
     margin: 0 2px;
-    background-color: var(--color-gray-300);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.4s ease;
   }
 
   /* add bg color to the active dot/circle */
-  .active {
-    background-color: var(--color-gray-800);
-  }
 
   blockquote {
     margin-top: 0;
     p {
-      font-size: 1.35rem;
+      font-size: 1rem;
       padding: 0;
       margin-bottom: 0;
       font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-      color: var(--color-gray-700);
+
+      @media screen and (min-width: 640px) {
+        font-size: 1.35rem;
+      }
 
       &::after {
         content: "";

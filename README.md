@@ -21,6 +21,12 @@ Create more blocks, and look for a way to override some block templates
 
 ## Changelog
 
+### 1.2.6 - 2021-11-30
+
+- Fixed js error on safari
+- Made testimonial more responsive
+- Added custom text color to testimonial
+
 ### 1.2.5 - 2021-11-26
 
 - Added a border to posts list items

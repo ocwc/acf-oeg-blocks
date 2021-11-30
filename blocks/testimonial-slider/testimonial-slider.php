@@ -21,9 +21,10 @@ if (!empty($block['align'])) {
 // Load values and assign defaults.
 $testimonials = get_field('testimonial');
 $bgColor = get_field('bg_color');
+$txtColor = get_field('text_color');
 
 ?>
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>" style="background-color:<?php echo $bgColor;  ?>">
+<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
 	<div class="ts-wrapper">
 		<?php
 
@@ -54,7 +55,7 @@ $bgColor = get_field('bg_color');
 						<?php endif; ?>
 
 						<?php if ($info) : ?>
-							<p class="info text-sm font-sans text-gray-500 mb-0"><?php echo $info; ?></p>
+							<p class="info text-sm font-sans mb-0"><?php echo $info; ?></p>
 						<?php endif; ?>
 
 						<?php if ($tsphoto) :
@@ -88,3 +89,25 @@ $bgColor = get_field('bg_color');
 		<?php endforeach; ?>
 	</div>
 </div>
+
+<style>
+	.testimonial-slider {
+		background-color: <?php echo $bgColor;  ?>;
+		color: <?php echo $txtColor; ?>;
+	}
+
+	.dot {
+		background-color: <?php echo $txtColor; ?>;
+		opacity: 0.25;
+	}
+
+	.active {
+		background-color: <?php echo $txtColor; ?>;
+		opacity: 1;
+	}
+
+	.author,
+	.info {
+		color: <?php echo $txtColor; ?>;
+	}
+</style>
