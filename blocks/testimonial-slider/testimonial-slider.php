@@ -20,8 +20,8 @@ if (!empty($block['align'])) {
 
 // Load values and assign defaults.
 $testimonials = get_field('testimonial');
-$bgColor = get_field('bg_color');
-$txtColor = get_field('text_color');
+$bgColor = get_field('bg_color') ?: '#f4f4f4';;
+$txtColor = get_field('text_color') ?: '#333333';;
 
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">

@@ -21,7 +21,7 @@ Create more blocks, and look for a way to override some block templates
 
 ## Changelog
 
-### 1.2.6 - 2021-11-30
+### 1.2.7 - 2021-11-30
 
 - Fixed js error on safari
 - Made testimonial more responsive
