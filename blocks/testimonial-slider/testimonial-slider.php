@@ -101,7 +101,7 @@ $txtColor = get_field('text_color') ?: '#333333';;
 		opacity: 0.25;
 	}
 
-	.active {
+	.dot.active {
 		background-color: <?php echo $txtColor; ?>;
 		opacity: 1;
 	}

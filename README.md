@@ -21,6 +21,10 @@ Create more blocks, and look for a way to override some block templates
 
 ## Changelog
 
+### 1.2.8 - 2021-11-30
+
+- Fixed css active item applying to all site
+
 ### 1.2.7 - 2021-11-30
 
 - Fixed js error on safari
