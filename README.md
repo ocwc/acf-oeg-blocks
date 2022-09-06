@@ -21,6 +21,11 @@ Create more blocks, and look for a way to override some block templates
 
 ## Changelog
 
+### 1.2.9 - 2022-09-05
+
+- Removed tailwaind dependency from Feeatured block
+- Removed max height from item that caused trouble
+
 ### 1.2.8 - 2021-11-30
 
 - Fixed css active item applying to all site

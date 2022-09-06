@@ -24,16 +24,16 @@ $header = get_field('block_header');
 ?>
 
 <?php if ($header) : ?>
-    <h2 class="featured-block-header text-black-200 border-b border-gray-400 text-xl font-bold font-sans"><?php echo $header; ?></h2>
+    <h2 class="featured-block-header"><?php echo $header; ?></h2>
 <?php endif; ?>
 
 <?php $count = (count($feat_block)); ?>
 
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> grid grid-rows-auto grid-cols-auto gap-4
+<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>
         <?php if ($count >= 3) : ?>
-        three-items lg:grid-rows-2 lg:grid-cols-3 gap-0 lg:gap-4
+        three-items
         <?php else : ?>
-        two-items md:grid-rows-1 md:grid-cols-2 gap-2 md:gap-4
+        two-items
         <?php endif; ?>">
     <?php
     // Check rows exists.
@@ -58,14 +58,12 @@ $header = get_field('block_header');
                 $linkTitle = $link['title'];
                 echo esc_url($linkUrl);
             ?>" title="<?php echo esc_attr($linkTitle);
-                    endif; ?>" class="featured-item h-400px
+                    endif; ?>" class="featured-item
             <?php if ($count >= 3) : ?>
                 <?php if ($index == 1) : ?>
-                md:row-span-2 md:col-span-2
-                <?php else : ?> 
-                col-auto row-auto
-                    <?php endif; ?>
-          <?php endif; ?>
+                item-1
+                <?php endif; ?>
+            <?php endif; ?>
             ">
                 <?php
                 if ($img) :

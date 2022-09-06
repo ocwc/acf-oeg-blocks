@@ -1,21 +1,48 @@
 @import url(colors.css);
 
+$size__query-sm: 48rem;
+$size__query-md: 56rem;
+$size__query-lg: 72rem;
+
 /* 
 **  Featured items 
 */
 .oeg-featured-block {
+  // grid grid-rows-auto grid-cols-auto gap-4
+
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  gap: 0.5rem;
+  grid-auto-rows: min-content;
+
+  @media (min-width: $size__query-md) {
+    &.two-items {
+      grid-template-rows: repeat(1, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    &.three-items {
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+  }
+
   .featured-block-header {
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
   }
 
   a.featured-item {
+    // featured-item h-400px md:row-span-2 md:col-span-2
+
     background-color: transparent;
     border: none !important;
     background-image: none;
     position: relative;
     width: 100%;
-    max-height: 520px;
+    // max-height: 520px;
     display: block;
     text-decoration: none;
     overflow: hidden;
@@ -26,6 +53,17 @@
       0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: 1s all;
     overflow: hidden;
+    justify-self: stretch;
+
+    @media (min-width: $size__query-md) {
+      grid-column: auto;
+      grid-row: auto;
+
+      &.item-1 {
+        grid-row: span 2 / span 2;
+        grid-column: span 2 / span 2;
+      }
+    }
 
     img {
       width: 100%;
@@ -39,8 +77,15 @@
 
     &:hover {
       img {
-        transform: scale(1.1);
+        transform: scale(1.075);
         transition: transform 500ms;
+      }
+    }
+
+    &:not(.item-1) {
+      .title {
+        font-size: 0.9rem;
+        bottom: 0.5rem;
       }
     }
 
@@ -66,6 +111,7 @@
       border-bottom-width: 2px;
       border-color: #cfdefc;
       max-width: 90%;
+      margin: 0;
     }
 
     &:hover .title {
@@ -214,14 +260,6 @@
     .line1 {
       font-size: 1rem;
       font-weight: bold;
-    }
-
-    .line2 {
-      font-size: normal;
-    }
-
-    .line3 {
-      font-size: normal;
     }
 
     &:hover {
