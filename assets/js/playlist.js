@@ -11,7 +11,7 @@ function init() {
   var playlist = document.getElementById("playlist");
   var tracks = playlist.getElementsByTagName("a");
   audio.volume = 0.1;
-  audio.play();
+  //audio.play();
 
   //Agregamos los eventos a los links que nos permitirán cambiar de canción
   for (var track in tracks) {

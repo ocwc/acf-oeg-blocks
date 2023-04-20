@@ -4,6 +4,38 @@ $size__query-sm: 48rem;
 $size__query-md: 56rem;
 $size__query-lg: 72rem;
 
+$font__sans: "Montserrat", Helvetica, Arial, sans-serif;
+
+// Mixins
+
+@mixin oeg-link {
+  text-decoration: none;
+  background-image: -webkit-linear-gradient(
+    top,
+    transparent calc(100% - 4px),
+    var(--color-brand-blue-300) 4px
+  );
+  background-image: -o-linear-gradient(
+    top,
+    transparent calc(100% - 4px),
+    var(--color-brand-blue-300) 4px
+  );
+  background-image: linear-gradient(
+    180deg,
+    transparent calc(100% - 4px),
+    var(--color-brand-blue-300) 4px
+  );
+  background-position: right 50% bottom 2px;
+  -webkit-transition: background-position 0.2s;
+  -o-transition: background-position 0.2s;
+  transition: background-position 0.2s;
+  overflow-wrap: break-word;
+
+  &:hover {
+    background-position: right 50% bottom 0;
+  }
+}
+
 /* 
 **  Featured items 
 */
@@ -232,7 +264,10 @@ $size__query-lg: 72rem;
   margin: 1rem 0;
 
   a {
-    &:hover {
+    text-decoration: none;
+    color: inherit;
+    &:hover,
+    &:focus {
       border: none;
       text-decoration: none;
       background-image: none;
@@ -252,14 +287,21 @@ $size__query-lg: 72rem;
     .line1,
     .line2,
     .line3 {
-      font-family: Montserrat, sans-serif;
+      font-family: $font__sans;
       text-align: center;
       margin-bottom: 0.25rem;
     }
 
     .line1 {
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: bold;
+    }
+    .line2 {
+      font-size: 0.75rem;
+    }
+    .line3 {
+      font-size: 0.65rem;
+      font-style: italic;
     }
 
     &:hover {
@@ -323,6 +365,36 @@ $size__query-lg: 72rem;
 
 .postlist {
   margin: 1em 0;
+  font-family: $font__sans;
+
+  .title {
+    font-family: $font__sans;
+    font-weight: 700;
+    margin: 0.15rem 0;
+    font-size: 1.15rem;
+    text-decoration: none;
+
+    a {
+      text-decoration: none;
+      color: currentColor;
+
+      &:hover {
+        color: var(--color-brand-blue-500);
+      }
+    }
+  }
+  .excerpt {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    color: var(--color-gray-600);
+  }
+
+  .date,
+  .meta,
+  .country {
+    font-size: 0.75rem;
+    color: var(--color-gray-400);
+  }
 
   // Grid view
   .grid {
@@ -353,33 +425,33 @@ $size__query-lg: 72rem;
     .card {
       width: 100%;
       margin-bottom: 1rem;
-    }
 
-    a.post-item-block {
-      display: flex;
-      flex-wrap: nowrap;
-      align-items: stretch;
-      border: 0;
-      background-image: none;
+      &.post-item-block {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        border: 0;
+        background-image: none;
 
-      .post-pic {
-        flex: 0 1 25%;
+        .post-pic {
+          flex: 0 1 25%;
 
-        img {
-          width: 100%;
-          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
         }
-      }
-      .inner-card {
-        flex: 0 1 75%;
+        .inner-card {
+          flex: 0 1 75%;
 
-        .title {
-          font-size: 1.125rem;
-          line-height: 1.5rem;
+          .title {
+            font-size: 1.125rem;
+            line-height: 1.5rem;
 
-          @media screen and (min-width: 768px) {
-            font-size: 1.5rem;
-            line-height: 2rem;
+            @media screen and (min-width: 768px) {
+              font-size: 1.5rem;
+              line-height: 2rem;
+            }
           }
         }
       }
@@ -388,6 +460,9 @@ $size__query-lg: 72rem;
 
   .card {
     // card for both list and grid
+    border: 1px solid var(--color-gray-200);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
     .post-pic {
       overflow: hidden;
       img {
@@ -395,13 +470,8 @@ $size__query-lg: 72rem;
         transition: transform 500ms;
         will-change: transform;
         transform: scale(1);
-      }
-    }
-
-    &:hover {
-      .post-pic {
-        img {
-          transform: scale(1.1);
+        &:hover {
+          transform: scale(1.05);
           transition: transform 500ms;
         }
       }
@@ -424,21 +494,8 @@ $size__query-lg: 72rem;
     padding: 2rem 1rem;
   }
 
-  &:hover {
-    background: #f5f5f5;
-
-    .title {
-      color: #3b80f7; //blue-400
-    }
-  }
-
   &:active {
-    background: #3b80f7;
-    color: white;
-    .title,
-    .cats span {
-      color: white;
-    }
+    border-color: var(--color-brand-blue-400);
   }
 }
 

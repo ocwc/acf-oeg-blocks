@@ -50,7 +50,7 @@ $peopleGrid = get_field('personas');
         ?>
 
         <div class="inner-card">
-          <div class="pic bg-blue-400">
+          <div class="pic">
             <?php
             // Do something...
             if ($photo) :
@@ -67,17 +67,17 @@ $peopleGrid = get_field('personas');
           $name = $lines['line1'] ?: 'Ale José Yunuen';
 
           if ($lines['line1']) :
-            echo '<p class="line1 text-base">' . $name . '</p>';
+            echo '<p class="line1">' . $name . '</p>';
           else :
-            echo '<p class="line1 text-base">Ale José Yunuen</p>';
+            echo '<p class="line1">Ale José Yunuen</p>';
           endif;
 
           if ($lines['line2']) :
-            echo '<p class="line2 text-sm">' . $lines['line2'] . '</p>';
+            echo '<p class="line2">' . $lines['line2'] . '</p>';
           endif;
 
           if ($lines['line3']) :
-            echo '<p class="line3 text-xs italic">' . $lines['line3'] . '</p>';
+            echo '<p class="line3">' . $lines['line3'] . '</p>';
           endif;
           ?>
         </div>

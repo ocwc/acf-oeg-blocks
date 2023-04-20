@@ -107,22 +107,22 @@
 .postlist .list .card a {
   color: #333333;
 }
-.postlist .list a.post-item-block {
+.postlist .list .post-item-block {
   display: flex;
   flex-wrap: nowrap;
   align-items: stretch;
   border: 0;
   background-image: none;
 }
-.postlist .list a.post-item-block .post-pic {
+.postlist .list .post-item-block .post-pic {
   flex: 0 1 25%;
   background: yellowgreen;
 }
-.postlist .list a.post-item-block .post-pic img {
+.postlist .list .post-item-block .post-pic img {
   width: 100%;
   height: 100%;
 }
-.postlist .list a.post-item-block .inner-card {
+.postlist .list .post-item-block .inner-card {
   flex: 0 1 75%;
 }
 .postlist .card .post-pic img {

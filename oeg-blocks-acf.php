@@ -27,7 +27,7 @@ if (!defined('ABSPATH')) {
 
 // Constants
 
-define('OEGBLOCKS__PLUGIN_VERSION', '1.2.9');
+define('OEGBLOCKS__PLUGIN_VERSION', '1.3.0');
 define('OEGBLOCKS__PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('OEGBLOCKS__PLUGIN_URL', plugin_dir_url(__FILE__));
 define('OEGBLOCKS__BASENAME', plugin_basename(__FILE__));

@@ -47,8 +47,8 @@ if (!empty($block['align'])) {
         $cats = get_the_category($feat_post->ID);
         $country = get_field('country', $feat_post->ID);
       ?>
-        <div class="card p-0 font-sans shadow border-2 border-gray-200 hover:border-blue-700 hover:shadow-lg">
-          <a href="<?php echo esc_url($permalink); ?>" class="post-item-block">
+        <div class="card post-item-block">
+          <a href="<?php echo esc_url($permalink); ?>">
             <?php
             if ($image) :
               if ($postImg) :
@@ -58,6 +58,7 @@ if (!empty($block['align'])) {
               endif;
             endif;
             ?>
+            </a>
             <div class="content inner-card">
               <?php
               if ($category && !empty($cats)) :
@@ -68,22 +69,22 @@ if (!empty($block['align'])) {
                 echo '</div>';
               endif;
               ?>
-              <p class="title font-sans text-lg font-bold my-4 leading-tight"><?php echo esc_html($title); ?></p>
+              <h3 class="title"><a href="<?php echo esc_url($permalink); ?>"><?php echo esc_html($title); ?></a></h3>
 
               <?php if ($exc) : ?>
-                <p class="excerpt font-sans text-sm"><?php echo wp_strip_all_tags($result) . '...'; ?></p>
+                <p class="excerpt"><?php echo wp_strip_all_tags($result) . '...'; ?></p>
               <?php endif; ?>
 
               <?php if ($date) : ?>
-                <p class="date font-sans text-sm text-gray-600"><?php echo get_the_date('F j, Y', $feat_post->ID); ?></p>
+                <p class="date font-sans"><?php echo get_the_date('F j, Y', $feat_post->ID); ?></p>
               <?php endif; ?>
 
               <?php if ($country) : ?>
-                <p class="meta country font-sans text-sm text-gray-600"><?php echo $country; ?></p>
+                <p class="meta country font-sans"><?php echo $country; ?></p>
               <?php endif; ?>
 
             </div>
-          </a>
+          
         </div>
       <?php endforeach; ?>
     </div>
