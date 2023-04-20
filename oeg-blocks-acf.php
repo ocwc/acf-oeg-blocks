@@ -2,7 +2,7 @@
 /*
 Plugin Name: OEGlobal Blocks with ACF
 Description: Adds custom gutenberg blocks with the help of ACF PRO.
-Version: 1.2.8
+Version: 1.3.0
 Author: Mario Badilla - OEGlobal
 Github Plugin URI: https://github.com/ocwc/oeg-blocks-acf
 Primary Branch: main
