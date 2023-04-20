@@ -21,6 +21,11 @@ Create more blocks, and look for a way to override some block templates
 
 ## Changelog
 
+### 1.3.0 - 2023-04-20
+
+- Removed auto play from playlist
+- A number of improvements and fixes
+
 ### 1.2.9 - 2022-09-05
 
 - Removed tailwaind dependency from Feeatured block
